@@ -65,73 +65,47 @@ namespace Graphify
         {
             SideBar.Height = btnDraw.Height;
             SideBar.Top = btnDraw.Top;
-            if(drawPanel.Visible == true)
-            {
-                drawPanel.Visible = false;
-            }
-            else
-            {
-                drawPanel.Visible = true;
-                viewPanel.Visible = false;
-                traversePanel.Visible = false;
-                searchPanel.Visible = false;
-                configPanel.Visible = false;
-            }
+            drawMenu.Show();
+            mainPanel.Visible = false;
+            drawMenu.Visible = true;
+            traverseMenu.Visible = false;
+            searchMenu.Visible = false;
+            viewMenu.Visible = false;
         }
 
         private void btnHill_Click(object sender, EventArgs e)
         {
             SideBar.Height = btnView.Height;
             SideBar.Top = btnView.Top;
-            if (viewPanel.Visible == true)
-            {
-                viewPanel.Visible = false;
-            }
-            else
-            {
-                viewPanel.Visible = true;
-                drawPanel.Visible = false;
-                traversePanel.Visible = false;
-                searchPanel.Visible = false;
-                configPanel.Visible = false;
-            }
+            mainPanel.Visible = false;
+            drawMenu.Visible = false;
+            traverseMenu.Visible = false;
+            searchMenu.Visible = false;
+            viewMenu.Visible = true;
+
         }
 
         private void btnVigenere_Click(object sender, EventArgs e)
         {
             SideBar.Height = btnTraverse.Height;
             SideBar.Top = btnTraverse.Top;
-            if (traversePanel.Visible == true)
-            {
-                traversePanel.Visible = false;
-            }
-            else
-            {
-                traversePanel.Visible = true;
-                drawPanel.Visible = false;
-                viewPanel.Visible = false;
-                searchPanel.Visible = false;
-                configPanel.Visible = false;
-            }
+            mainPanel.Visible = false;
+            drawMenu.Visible = false;
+            traverseMenu.Visible = true;
+            searchMenu.Visible = false;
+            viewMenu.Visible = false;
+
         }
 
         private void btnTransposition_Click(object sender, EventArgs e)
         {
             SideBar.Height = btnSearch.Height;
             SideBar.Top = btnSearch.Top;
-            if (searchPanel.Visible == true)
-            {
-                searchPanel.Visible = false;
-                configPanel.Visible = false;
-            }
-            else
-            {
-                searchPanel.Visible = true;
-                drawPanel.Visible = false;
-                viewPanel.Visible = false;
-                traversePanel.Visible = false;
-                configPanel.Visible = false;
-            }
+            mainPanel.Visible = false;
+            drawMenu.Visible = false;
+            traverseMenu.Visible = false;
+            searchMenu.Visible = true;
+            viewMenu.Visible = false;
         }
 
         private void btnRailFence_Click(object sender, EventArgs e)
@@ -182,13 +156,11 @@ namespace Graphify
         private void btnNodes_Click(object sender, EventArgs e)
         {
             choice = 1;
-            drawPanel.Visible = false;
         }
 
         private void btnEdges_Click(object sender, EventArgs e)
         {
             choice = 2;
-            drawPanel.Visible = false;
         }
 
         private void panelArea_Paint(object sender, PaintEventArgs e)
@@ -618,6 +590,20 @@ namespace Graphify
                     }
                 }
             }
-            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            mainPanel.Visible = true;
+            drawMenu.Visible = false;
+            traverseMenu.Visible = false;
+            searchMenu.Visible = false;
+            viewMenu.Visible = false;
         }
     }
+}

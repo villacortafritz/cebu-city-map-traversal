@@ -43,8 +43,8 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.txtEncrypt = new System.Windows.Forms.RichTextBox();
+            this.txtEnd = new System.Windows.Forms.RichTextBox();
+            this.txtStart = new System.Windows.Forms.RichTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnProceed = new System.Windows.Forms.Button();
             this.searchPanel = new System.Windows.Forms.Panel();
@@ -220,7 +220,9 @@
             this.panelArea.Name = "panelArea";
             this.panelArea.Size = new System.Drawing.Size(750, 550);
             this.panelArea.TabIndex = 7;
+            this.panelArea.Paint += new System.Windows.Forms.PaintEventHandler(this.panelArea_Paint_1);
             this.panelArea.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelArea_MouseDown);
+            this.panelArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelArea_MouseMove);
             // 
             // configPanel
             // 
@@ -228,8 +230,8 @@
             this.configPanel.Controls.Add(this.lblSearch);
             this.configPanel.Controls.Add(this.label2);
             this.configPanel.Controls.Add(this.label1);
-            this.configPanel.Controls.Add(this.richTextBox1);
-            this.configPanel.Controls.Add(this.txtEncrypt);
+            this.configPanel.Controls.Add(this.txtEnd);
+            this.configPanel.Controls.Add(this.txtStart);
             this.configPanel.Controls.Add(this.btnClear);
             this.configPanel.Controls.Add(this.btnProceed);
             this.configPanel.Location = new System.Drawing.Point(495, 12);
@@ -270,23 +272,23 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "From:";
             // 
-            // richTextBox1
+            // txtEnd
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(49, 73);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(90, 35);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.txtEnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEnd.Location = new System.Drawing.Point(49, 73);
+            this.txtEnd.Name = "txtEnd";
+            this.txtEnd.Size = new System.Drawing.Size(90, 35);
+            this.txtEnd.TabIndex = 6;
+            this.txtEnd.Text = "";
             // 
-            // txtEncrypt
+            // txtStart
             // 
-            this.txtEncrypt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEncrypt.Location = new System.Drawing.Point(50, 29);
-            this.txtEncrypt.Name = "txtEncrypt";
-            this.txtEncrypt.Size = new System.Drawing.Size(90, 35);
-            this.txtEncrypt.TabIndex = 5;
-            this.txtEncrypt.Text = "";
+            this.txtStart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStart.Location = new System.Drawing.Point(50, 29);
+            this.txtStart.Name = "txtStart";
+            this.txtStart.Size = new System.Drawing.Size(90, 35);
+            this.txtStart.TabIndex = 5;
+            this.txtStart.Text = "";
             // 
             // btnClear
             // 
@@ -315,6 +317,7 @@
             this.btnProceed.TabIndex = 2;
             this.btnProceed.Text = "Search";
             this.btnProceed.UseVisualStyleBackColor = true;
+            this.btnProceed.Click += new System.EventHandler(this.btnProceed_Click);
             // 
             // searchPanel
             // 
@@ -427,6 +430,7 @@
             this.btnMatrix.TabIndex = 0;
             this.btnMatrix.Text = "Matrix View";
             this.btnMatrix.UseVisualStyleBackColor = true;
+            this.btnMatrix.Click += new System.EventHandler(this.btnMatrix_Click);
             // 
             // traversePanel
             // 
@@ -452,6 +456,7 @@
             this.btnDFS.TabIndex = 1;
             this.btnDFS.Text = "DFS";
             this.btnDFS.UseVisualStyleBackColor = true;
+            this.btnDFS.Click += new System.EventHandler(this.btnDFS_Click);
             // 
             // btnBFS
             // 
@@ -466,6 +471,7 @@
             this.btnBFS.TabIndex = 0;
             this.btnBFS.Text = "BFS";
             this.btnBFS.UseVisualStyleBackColor = true;
+            this.btnBFS.Click += new System.EventHandler(this.btnBFS_Click);
             // 
             // drawPanel
             // 
@@ -555,8 +561,8 @@
         private System.Windows.Forms.Button btnDFS;
         private System.Windows.Forms.Button btnBFS;
         private System.Windows.Forms.Panel configPanel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox txtEncrypt;
+        private System.Windows.Forms.RichTextBox txtEnd;
+        private System.Windows.Forms.RichTextBox txtStart;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnProceed;
         private System.Windows.Forms.Panel searchPanel;

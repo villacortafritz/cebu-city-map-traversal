@@ -40,3 +40,4 @@ C:\Users\Fritz Villacorta\Desktop\Graphify\Graphify\obj\Debug\Graphify.csproj.Ge
 C:\Users\Fritz Villacorta\Desktop\Graphify\Graphify\obj\Debug\Graphify.csproj.CoreCompileInputs.cache
 C:\Users\Fritz Villacorta\Desktop\Graphify\Graphify\obj\Debug\Graphify.exe
 C:\Users\Fritz Villacorta\Desktop\Graphify\Graphify\obj\Debug\Graphify.pdb
+C:\Users\Fritz Villacorta\Desktop\Graphify\Graphify\obj\Debug\Graphify.Form2.resources

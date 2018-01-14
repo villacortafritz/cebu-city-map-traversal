@@ -103,6 +103,23 @@ namespace Graphify
             return flag;
         }
 
+        public int getConnections(int node)
+        {
+            int num =0;
+
+            for(int i=node; i<=node; i++)
+            {
+                for(int j=0; j<size; j++)
+                {
+                    if (nodes[i, j].Text.Equals("1"))
+                    {
+                        num++;
+                    }
+                }
+            }
+            return num;
+        }
+
         public void reset()
         {
             for (int i = 0; i < size; i++)
@@ -137,6 +154,10 @@ namespace Graphify
         private void GraphMatrix_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        public string MyValue
+        {
+            get { return GraphMatrix.Text; }
         }
     }
 }

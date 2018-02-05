@@ -1,4 +1,4 @@
-# cebu-city-map-traversal#
+# cebu-city-map-traversal
 
 Allows users to draw dots on the map and connect multiple dots and determine distance between two dots.
 

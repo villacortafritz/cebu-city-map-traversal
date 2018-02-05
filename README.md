@@ -17,3 +17,5 @@ Also includes Constraint Satisfaction Problems.
 Additional functions include:
 Saving Files
 Open and Load Files
+Coordinates tracking
+Generate Matrix based on dots connected
